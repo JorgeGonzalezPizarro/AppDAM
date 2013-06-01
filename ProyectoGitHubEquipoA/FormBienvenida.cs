@@ -16,5 +16,12 @@ namespace ProyectoGitHubEquipoA
         {
             InitializeComponent();
         }
+
+        //INICIA EL FORMULARIO DE ASIGNATURAS (ALVARO)
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FormAlvaro formAsignaturas = new FormAlvaro();
+            formAsignaturas.Show();
+        }
     }
 }

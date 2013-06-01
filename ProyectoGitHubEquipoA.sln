@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Express 2012 for Windows Desktop
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProyectoGitHubEquipoA", "ProyectoGitHubEquipoA\ProyectoGitHubEquipoA.csproj", "{187BEF90-158C-4355-BD54-FD8FBA131E41}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PruebaMySQL", "..\..\..\Desktop\ProyectoC#\PruebaMySQL\PruebaMySQL.csproj", "{1F204A1E-03C0-49C8-AD21-3822EB652C55}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{187BEF90-158C-4355-BD54-FD8FBA131E41}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{187BEF90-158C-4355-BD54-FD8FBA131E41}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{187BEF90-158C-4355-BD54-FD8FBA131E41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F204A1E-03C0-49C8-AD21-3822EB652C55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F204A1E-03C0-49C8-AD21-3822EB652C55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F204A1E-03C0-49C8-AD21-3822EB652C55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F204A1E-03C0-49C8-AD21-3822EB652C55}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
