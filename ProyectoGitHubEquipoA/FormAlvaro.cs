@@ -13,6 +13,21 @@ using MySql.Data.MySqlClient;
 
 namespace ProyectoGitHubEquipoA
 {
+
+    /*
+     * ===========================================================
+     * =========== FORMULARIO DE ASIGNATURAS DE 1 DAM ============
+     * ================ HECHO POR ÁLVARO CUEVAS ==================
+     * 
+     * Dicho formulario de la aplicación trata de mostrar toda la
+     * información relevante sobre las asignaturas dadas durante el
+     * año completo asícomo profesores que las impartieron y demás
+     * detalles teniendo en cuenta cada tipo de asignatura y las horas
+     * semanales dedicadas a cada una.
+     * 
+     * ============================================================
+     */
+
     public partial class FormAlvaro : Form
     {
 
@@ -136,6 +151,27 @@ namespace ProyectoGitHubEquipoA
 
             conexion.Close();
         }
+
+        //ACTUALIZA LOS LISTBOX DE LA BD TRAS UNA PREVIA INSERCION DE DATOS
+        private void button6_Click(object sender, EventArgs e)
+        {
+            conexion.Open();
+
+            sentenciaSQL = "SELECT * FROM test.asignaturas";
+            comando = new MySqlCommand(sentenciaSQL, conexion);
+            resultado = comando.ExecuteReader();
+
+            listBox1.Visible = true;
+            listBox2.Visible = true;
+            listBox3.Visible = true;
+            listBox4.Visible = true;
+            listBox5.Visible = true;
+
+            label16.Visible = false;
+            label20.Visible = false;
+
+            conexion.Close();
+        } 
 
 
 
