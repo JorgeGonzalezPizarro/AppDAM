@@ -93,6 +93,50 @@ namespace ProyectoGitHubEquipoA
             listBox5.Visible = false;
         }
 
+        //PERMITE DAR A CONOCER MAS INFORMACION ACERCA DE LAS ASIGNATURAS Y PROFESORES QUE LAS IMPARTEN
+        private void button4_Click(object sender, EventArgs e)
+        {
+            conexion.Open();
+
+            sentenciaSQL = "SELECT asignatura, MAX(horas_semanales) FROM test.asignaturas";
+            comando = new MySqlCommand(sentenciaSQL, conexion);
+            resultado = comando.ExecuteReader();
+
+            if (resultado.Read())
+            {
+                label13.Text = resultado.GetString("asignatura") + " con " + resultado.GetString("MAX(horas_semanales)") + " horas por semana";
+
+            }
+
+            conexion.Close();
+            conexion.Open();
+
+            sentenciaSQL = "SELECT * FROM test.asignaturas WHERE nombre='Juan'";
+            comando = new MySqlCommand(sentenciaSQL, conexion);
+            resultado = comando.ExecuteReader();
+
+            if (resultado.Read())
+            {
+                label14.Text = resultado.GetString("asignatura") + " impartido por " + resultado.GetString("nombre") + " " + resultado.GetString("apellido") + " con " + resultado.GetString("horas_semanales") + " horas dedicadas";
+
+            }
+
+            conexion.Close();
+            conexion.Open();
+
+            sentenciaSQL = "SELECT COUNT(asignatura), SUM(horas_semanales) FROM test.asignaturas";
+            comando = new MySqlCommand(sentenciaSQL, conexion);
+            resultado = comando.ExecuteReader();
+
+            if (resultado.Read())
+            {
+                label17.Text = "Damos un total de " + resultado.GetString("COUNT(asignatura)") + " asignaturas con un total de " + resultado.GetString("SUM(horas_semanales)") + " horas semanales";
+
+            }
+
+            conexion.Close();
+        }
+
 
 
 
